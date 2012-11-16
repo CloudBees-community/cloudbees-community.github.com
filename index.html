@@ -40,30 +40,33 @@ This github group contains a lot of our open source - some are functional parts 
 
 <p>If you have an open source project you want build via Jenkins for free - please to try out <a href="https://buildhive.cloudbees.com">https://buildhive.cloudbees.com</a> - all your need is your github account.</p>
 
-<h3>ClickStarts you will find here</h3>
+<h3>ClickStarts - Quick Starts !</h3>
 
-<p>ClickStarts are pre-built stacks that people can build from - generally they are repos that end with </p>
+<p>ClickStarts are pre-built stacks that people can build from - they are repositoryies that have a clickstart.json that defines what repo to clone, what app to run, if there is a database to create etc. They are designed as tools to get people started instantly with the whole stack running on the cloudbees cloud. You can fork them and make them your own, or build new ones from scratch. </p>
 
 <pre><code>-clickstart
 </code></pre>
 
-<p>So you can easily spot them. If you want to make your own - fork one that is similar - and go from there. Send us a pull request if you like.</p>
+<p>So you can easily spot them. If you want to make your own - fork one that is similar - and go from there. Send us a pull request if you like. Look for the clickstart.json file in each repo, and be sure to read the readme. </p>
 
-<h3>ClickStacks</h3>
+<h3>Runtime containers</h3>
 
-<p>ClickStacks are runtime containers that are used by cloudbees - these are forkable - each one contains instructions on how to use if you want to customise it to your own needs. 
-These typically end with </p>
+<p>CloudBees has plugin based runtime containers - these are often known as "clickstacks". You will use pre-made ones - modified ones - or build your own from scratch - you will find them all here. These are forkable - each one contains instructions on how to use if/develop it you want to customise it to your own needs. </p>
+
+<p>Some clickstacks/plugins stand alone - some exist to augment others (for example - Newrelic exists to add features to other ones so you get newrelic monitoring !).</p>
+
+<p>These typically end with </p>
 
 <pre><code>-clickstack
 </code></pre>
 
-<p>so you can easily spot them - crazy huh !</p>
+<p>so you can easily spot them - crazy huh ! The key file in each clickstack is the "setup" script - that is the core of every single one (a clickstack lifestyle involves installing the stack on the platform - and running setup when an application is installed. Setup is responsible for creating the control structure that the platform will use to start each container. Setup is run only once - on each app instance - when an application lands on a server. Typicalyl the setup will write a <code>.genapp/control/start</code> script which will start the actual application. You can read more about how things work at a low level here: <a href="http://genapp-docs.cloudbees.com/">http://genapp-docs.cloudbees.com/</a> - and how to get started with your own. </p>
 
 <p>Use your favourite git or github client and enjoy !</p>
 
 <h3>The rest?</h3>
 
-<p>A hodge podge of utilities and important tools. And perhaps some bad ideas. </p>
+<p>A hodge podge of utilities and important tools. And perhaps some bad ideas. No, all good ones, I just checked.</p>
 
 <p>There are still some projects located at <a href="https://github.com/cloudbees">https://github.com/cloudbees</a> as well.</p>
 
