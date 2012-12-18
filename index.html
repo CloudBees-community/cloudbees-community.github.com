@@ -43,12 +43,12 @@
 
 <h3>ClickStarts - Quick Starts !</h3>
 
-<p>ClickStarts are pre-built stacks that people can build from - they are repositories that have a clickstart.json that defines what repo to clone, what app to run, if there is a database to create etc. They are designed as tools to get people started instantly with the whole stack running on the cloudbees cloud. You can fork them and make them your own, or build new ones from scratch. </p>
+<p>ClickStarts are pre-built stacks that people can build from - they are repositories that have a clickstart.json that defines what repo to clone, what app to run, if there is a database to create etc. They are designed as tools to get people started instantly with the whole stack running on the cloudbees cloud. You can fork them and make them your own, or build new ones from scratch. Look for projects postfixed with:</p>
 
 <pre><code>-clickstart
 </code></pre>
 
-<p>So you can easily spot them. If you want to make your own - fork one that is similar - and go from there. Send us a pull request if you like. Look for the clickstart.json file in each repo, and be sure to read the readme. </p>
+<p>In the name, so you can easily spot them (they also have a clickstart.json file - which is the interesting bit). If you want to make your own - fork one that is similar - and go from there. Send us a pull request if you like. Look for the clickstart.json file in each repo, and be sure to read the readme. </p>
 
 <h3>Runtime containers</h3>
 
@@ -61,9 +61,19 @@
 <pre><code>-clickstack
 </code></pre>
 
-<p>so you can easily spot them - crazy huh ! The key file in each clickstack is the "setup" script - that is the core of every single one (a clickstack lifestyle involves installing the stack on the platform - and running setup when an application is installed. Setup is responsible for creating the control structure that the platform will use to start each container. Setup is run only once - on each app instance - when an application lands on a server. Typicalyl the setup will write a <code>.genapp/control/start</code> script which will start the actual application. You can read more about how things work at a low level here: <a href="http://genapp-docs.cloudbees.com/">http://genapp-docs.cloudbees.com/</a> - and how to get started with your own. </p>
+<p>so you can easily spot them - crazy huh ! The key file in each clickstack is the "setup" script - that is the core of every single one (a clickstack lifestyle involves installing the stack on the platform - and running setup when an application is installed. Setup is responsible for creating the control structure that the platform will use to start each container. Setup is run only once - on each app instance - when an application lands on a server. Typically the setup will write a <code>.genapp/control/start</code> script which will start the actual application. </p>
 
-<p>Use your favourite git or github client and enjoy !</p>
+<p>Here is a complete guide to getting going with your own stack: <a href="http://wiki.cloudbees.com/bin/view/RUN/DevelopingStacks">http://wiki.cloudbees.com/bin/view/RUN/DevelopingStacks</a></p>
+
+<p>Here is a 10 minute tutorial: <a href="http://developer-blog.cloudbees.com/2012/12/make-your-own-runtime-in-10-minutes-or.html">http://developer-blog.cloudbees.com/2012/12/make-your-own-runtime-in-10-minutes-or.html</a> that will take you through building one.</p>
+
+<h3>GENAPP</h3>
+
+<p>Genapp is our open source utility that is the "kernel" of the paas - you can read more about how things work at a low level here: <a href="http://genapp-docs.cloudbees.com/">http://genapp-docs.cloudbees.com/</a> - and how to get started with your own. 
+The source code for genapp is here: <a href="https://github.com/cloudbees/genapp">https://github.com/cloudbees/genapp</a></p>
+
+<p>Use your favourite git or github client and enjoy !
+(git command line, github client, or source tree are the popular ones)</p>
 
 <h3>The rest?</h3>
 
